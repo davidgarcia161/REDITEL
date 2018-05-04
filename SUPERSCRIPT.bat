@@ -8,13 +8,13 @@ robocopy C:\REDITEL\magia-borras\Desktop C:\Users\Default\Desktop /MIR
 net user Admin	Overtel$10
 
 :: -- Accesos directos --
-robocopy Desktop C:\Users\Default\Desktop
+robocopy C:\REDITEL\magia-borras\Desktop C:\Users\Default\Desktop
 DIR C:\ReditelScan
 DIR C:\ControlNet
 
 :: -- Tareas programadas --
-schtasks.exe /Create /XML "C:\REDITEL\magia-borras\scripts\Tarea Paco.xml" /tn "Tarea Paco"
-schtasks.exe /Create /XML "C:\REDITEL\magia-borras\scripts\Actualizaciones Chocolatey.xml" /tn "Actualizaciones Chocolatey"
+schtasks.exe /Create /XML "C:\scripts\Tarea Paco.xml" /tn "Tarea Paco"
+schtasks.exe /Create /XML "C:\scripts\Actualizaciones Chocolatey.xml" /tn "Actualizaciones Chocolatey"
 
 :: -- Plan de energía --
 powercfg.exe /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
@@ -26,7 +26,7 @@ certutil -addstore -enterprise -f "CA" C:\REDITEL\magia-borras\ThawteCSG2.cer
 
 :: -- Instalacion bginfo --
 robocopy C:\REDITEL\magia-borras\Bginfo C:\Bginfo /e
-copy Bginfo\bginforeditel.lnk "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\bginforeditel.lnk"
+copy C:\REDITEL\magia-borras\Bginfo\bginforeditel.lnk "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\StartUp\bginforeditel.lnk"
 c:\bginfo\Bginfo.exe C:\Bginfo\confreditel.bgi /timer:0 /silent /NOLICPROMPT
 
 :: -- Instalacion zabbix --
@@ -55,7 +55,7 @@ choco install tightvnc -y
 ninja-setup-3.2.1.exe /silent /NOLICPROMPT
 
 :: -- Conf ThightVNC --
-REGEDIT /S C:\Users\Usuario\Escritorio\REDITEL\magia-borras\tigh_vnc.reg
+REGEDIT /S C:\REDITEL\magia-borras\tigh_vnc.reg
 
 
 :: -- Java noact --
