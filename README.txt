@@ -1,4 +1,4 @@
-# overtel
+# SUPERSCRIPT
 
 
 Situar la carpeta REDITEL en C:\REDITEL, si no, no funcionará correctamente.
