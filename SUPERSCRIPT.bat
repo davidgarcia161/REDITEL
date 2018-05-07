@@ -15,6 +15,7 @@ DIR C:\ControlNet
 :: -- Tareas programadas --
 schtasks.exe /Create /XML "C:\scripts\Tarea Paco.xml" /tn "Tarea Paco"
 schtasks.exe /Create /XML "C:\scripts\Actualizaciones Chocolatey.xml" /tn "Actualizaciones Chocolatey"
+schtasks.exe /Create /XML "C:\scripts\GitHub.xml" /tn "GitHub"
 
 :: -- Plan de energía --
 powercfg.exe /setactive 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
