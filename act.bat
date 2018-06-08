@@ -1,1 +1,0 @@
-chocolatey update all -y
