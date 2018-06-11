@@ -21,10 +21,10 @@ SET Prog_File_Dir="C:\Windows\Downloaded Program Files"
 rem expand %1*.cab %Prog_File_Dir%
 
 cd %Prog_File_Dir%
-@echo Registering *23021*.ddl
+@echo Registering *23021*.ddl 
 for  %%f  in  (*23021*.dll) do (
 @echo %%f
-regsvr32 %%f)
+regsvr32 /s /q %%f)
 
 @echo Register finished
 
